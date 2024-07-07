@@ -504,8 +504,8 @@ font-size: 1.5rem;
   }
 
   @keyframes marquee-mobile {
-      from { transform: translateX(300%); }
-      to { transform: translateX(-300%); }
+      from { transform: translateX(400%); }
+      to { transform: translateX(-400%); }
   }
 
   .marquee img {
