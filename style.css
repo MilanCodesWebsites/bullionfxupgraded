@@ -460,7 +460,9 @@ html{
         margin-bottom: 1rem;
         font-size: 0.9rem;
     }
-
+.content H1, span{
+font-size: 0.9rem;
+}
     .description {
         text-align: center;
     }
