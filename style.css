@@ -457,11 +457,10 @@ html{
 
     .text-box {
         margin-right: 0;
-        margin-bottom: 1rem;
-        font-size: 0.9rem;
+        margin-bottom: 1rem;
     }
 .content H1, span{
-font-size: 0.9rem;
+font-size: 1.5rem;
 }
     .description {
         text-align: center;
