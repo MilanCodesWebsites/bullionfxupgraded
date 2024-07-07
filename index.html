@@ -75,7 +75,7 @@
 
     <div class="video-container">
         <video autoplay muted loop class="background-video">
-            <source src="https://files.fm/u/yyuthfcrma" type="video/mp4">
+            <source src="Blue and Black Gradient Abstract YouTube Intro Video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="overlay">
@@ -98,7 +98,6 @@
  <!-- TradingView Widget BEGIN -->
  <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
     {
     "symbols": [
@@ -278,7 +277,7 @@
 </div>
 <div class="container4">
     <div class="heading">
-        <div style="display: inline-block; padding: 5px 15px; border: 1px solid #ccc; border-radius: 15px; margin-bottom: 10px;">TRADING OPTION</div>
+        <div style="display: inline-block; padding: 5px 15px; border: 1px solid #1ed7FE; border-radius: 15px; margin-bottom: 10px; color:#1ED7FE;">TRADING OPTION</div>
         <h2>Tradable Assets</h2>
         <p>New to Trading? No problem! We’ve got you covered with ample resources to assist your learning journey and kickstart your trading experience!</p>
     </div>
@@ -475,7 +474,7 @@ accordionItemBody.style.maxHeight = 0;
         <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
-    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
     {
     "width": "100%",
@@ -511,19 +510,19 @@ accordionItemBody.style.maxHeight = 0;
             </ul>
         </div>
         <div class="contacts">
+            <!-- <div class="grouptitle">Policies</div>
+            <ul>
+                <li><a href="contact.html" target="_blank">Business Enquiries</a></li>
+                <li><a href="termsandconditions.html" target="_blank">Terms and conditions</a></li>
+                <li><a href="privacypolicy.html" target="_blank">Privacy Policy</a></li>
+            </ul> -->
+        </div>
+        <div class="contacts">
             <div class="grouptitle">Policies</div>
             <ul>
                 <li><a href="contact.html" target="_blank">Business Enquiries</a></li>
                 <li><a href="termsandconditions.html" target="_blank">Terms and conditions</a></li>
                 <li><a href="privacypolicy.html" target="_blank">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="contacts">
-            <div class="grouptitle">Socials</div>
-            <ul>
-                <li><a href="" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
-                <li><a href="" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
-                <li><a href="" target="_blank"><i class=" fa fa-twitter"></i> Twitter</a></li>
             </ul>
         </div>
     </div>
@@ -554,7 +553,45 @@ accordionItemBody.style.maxHeight = 0;
 </footer>
 
 
+<div id="popup" class="popup">
+    <img src="diagram-bar-uptrend-svgrepo-com.svg" alt="Icon">
+    <div class="popup-text"></div>
+    <div class="popup-close" onclick="closePopup()">✖</div>
+</div>
 
+<script>
+    // Array of messages
+    const messages = [
+    "Antony from Columbus just earned $29,747 12 minutes ago.",
+        "John Doe from New York just deposited $5,000 5 minutes ago.",
+        "Jane Smith from Los Angeles just withdrew $2,000 3 minutes ago.",
+        "Alice Johnson from Chicago just earned $15,000 10 minutes ago.",
+        "Bob Williams from Houston just deposited $8,000 2 minutes ago.",
+        "Charlie Brown from Philadelphia just withdrew $10000 8 minutes ago.",
+        "Dave Wilson from Phoenix just earned $45,000 6 minutes ago.",
+        "Eva Davis from San Antonio just deposited $9,000 4 minutes ago.",
+        "Frank Miller from San Diego just withdrew $16,000 9 minutes ago.",
+        "Grace Lee from Dallas just earned $2500 7 minutes ago."
+    ];
+
+    // Function to show a random message
+    function showRandomMessage() {
+        const popupText = document.querySelector('.popup-text');
+        const randomIndex = Math.floor(Math.random() * messages.length);
+        popupText.textContent = messages[randomIndex];
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    // Show a random message every 10 seconds
+    setInterval(showRandomMessage, 3000);
+
+    // Show the first message immediately
+    showRandomMessage();
+</script>
 
 
 

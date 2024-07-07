@@ -399,7 +399,7 @@ html{
     top: 2px;
 }
 
-#content div{
+/* #content div{
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     opacity: 0;
     transform: translateY(50px);
@@ -407,7 +407,7 @@ html{
 #content .visible {
     opacity: 1;
     transform: translateY(0);
-}
+} */
 
 .container {
     display: flex;
@@ -458,7 +458,7 @@ html{
     .text-box {
         margin-right: 0;
         margin-bottom: 1rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .description {
@@ -503,8 +503,8 @@ html{
   }
 
   @keyframes marquee-mobile {
-      from { transform: translateX(150%); }
-      to { transform: translateX(-150%); }
+      from { transform: translateX(300%); }
+      to { transform: translateX(-300%); }
   }
 
   .marquee img {
@@ -586,7 +586,8 @@ html{
   }
 
   .feature {
-      max-width: 100%;
+    max-width: 100%;
+    padding: 20px;
   }
 }
 
@@ -998,85 +999,36 @@ html{
       max-width: 100%;
       margin: 10px 0;
   }
-  .connectcont{
-    padding: 20px;
-}
-.connect{
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-}
-.connectcont{
-    padding: 20px;
-}
-.connect{
-    padding: 30px;
-    width: 100%;
-    text-align: center;
-}
-.span{
-    width: 100%;
-    float: none;
-    display: block;
-}
-.spanbutton{
-    width: 100%;
-    float: none;
-    text-align: center;
-    margin: auto;
-    display: block;
-    margin-top: 23px;
-    width: 240px;
-}
-.insidefooterleft{
-    width: 100%;
-    text-align: center;
-}
-.company, .community, .contacts{
-    float: none;
-    text-align: center;
-    display: block;
-    width: 100%;
-}
-.explanation{
-    padding: 20px;
-    text-align: center;
+  
+.bigbox{
+  width: 100%;
 }
 }
-footer{
-  background-color: #0a0a23;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.connectcont{
-  background-color: #EDF1FC;
-  padding: 70px;
-}
-.insidefooterleft{
+.insidefooterleft {
   float: left;
   box-sizing: border-box;
-  background-color: transparent;
+  background-color: #111827;
   width: 100%;
   padding: 70px;
 }
-.company, .community{
+.company, .community {
   float: left;
   box-sizing: border-box;
   width: 25%;
 }
-.contacts{
-  float: right;
+.contacts {
+  float: left;
   box-sizing: border-box;
   width: 25%;
 }
-.grouptitle{
+.grouptitle {
   text-transform: uppercase;
   color: white;
   margin-bottom: 35px;
   letter-spacing: 0.01em;
   font-weight: 600;
 }
-ul li{
+ul li {
   list-style: none;
   line-height: 120%;
   text-decoration: none;
@@ -1084,25 +1036,135 @@ ul li{
   margin-left: -25px;
   font-size: 18px;
 }
-li a{
+li a {
   text-decoration: none;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.655);
 }
-li a:hover{
+li a:hover {
   color: white;
 }
-i{
+i {
   color: rgba(255, 255, 255, 0.655);
   font-size: 20px;
 }
-i:hover{
+i:hover {
   color: white;
 }
-.explanation{
-  background-color: transparent;
+.explanation {
+  background-color: #111827;
   color: white;
   padding: 100px;
   padding-left: 150px;
   padding-right: 150px;
+}
+.explanation p {
+  color: white;
+}
+@media (max-width: 768px) {
+  .asset-card {
+      flex: 1 1 100%;
+      max-width: 100%;
+      margin: 10px 0;
+  }
+  .connectcont {
+      padding: 20px;
+  }
+  .connect {
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+  }
+  .connectcont {
+      padding: 20px;
+  }
+  .connect {
+      padding: 30px;
+      width: 100%;
+      text-align: center;
+  }
+  .span {
+      width: 100%;
+      float: none;
+      display: block;
+  }
+  .spanbutton {
+      width: 100%;
+      float: none;
+      text-align: center;
+      margin: auto;
+      display: block;
+      margin-top: 23px;
+      width: 240px;
+  }
+  .insidefooterleft {
+      width: 100%;
+      text-align: center;
+  }
+  .company, .community, .contacts {
+      float: none;
+      text-align: center;
+      display: block;
+      width: 100%;
+  }
+  .explanation {
+      padding: 20px;
+      text-align: center;
+  }
+}
+
+.heading p, h2{
+  color: #1ED7FE;
+}
+
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+opacity: 0;
+transform: translateX(-100%);
+animation: slideInOut 8s ease-in-out infinite;
+
+}
+
+@keyframes slideInOut {
+0%, 100% { 
+opacity: 0; 
+transform: translateX(-100%); 
+}
+10%, 90% { 
+opacity: 1; 
+transform: translateX(0); 
+    }
+}
+
+.popup img {
+  width: 24px;
+  height: 24px;
+}
+
+.popup-text {
+  flex: 1;
+}
+
+.popup-close {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 18px;
+  color: #999;
+}
+
+.popup-close:hover {
+  color: #000;
 }
